@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Field | iCodeThis Weekly</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="card flex_container">
+        <h2 class="card-title">Enter Your Password</h2>
+        <div class="account_details">
+          <div><img src="https://i.pravatar.cc/50?img=9" alt="" /></div>
+          <div>
+            <p class="account_type">Business Account</p>
+            <h3 class="account_name">Sarah Biils</h3>
+          </div>
+        </div>
+        <form class="flex_container">
+          <div class="password_input">
+            <label for="password" style="display: block">Password</label>
+            <i class="fa-solid fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              class="password"
+              placeholder="Enter password"
+            />
+            <i class="fa-regular fa-eye" style="display: none"></i>
+            <i
+              class="fa-regular fa-eye-slash"
+              style="display: inline-block"
+            ></i>
+          </div>
+          <div class="btns">
+            <label class="toggle" for="stay_signed-in">
+              <input
+                type="checkbox"
+                id="stay_signed-in"
+                class="stay_signed-in"
+              />
+              <div class="fill"></div>
+              <span>Stay signed in</span>
+            </label>
+            <button class="submit">Continue</button>
+          </div>
+        </form>
+        <a href="#" class="reset">Reset Password</a>
+      </div>
+    </section>
+  </body>
+  <script src="app.js"></script>
+</html>

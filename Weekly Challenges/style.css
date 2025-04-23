@@ -1,0 +1,205 @@
+:root {
+  --ff-body: "Segoe UI", sans-serif;
+
+  --fw-bold: 650;
+  --fw-semi-bold: 500;
+  --fw-regular: 400;
+  --fw-thin: 300;
+
+  --clr-dark-blue: #003366;
+  --clr-gray: #808080;
+  --clr-white: #ffffff;
+  --clr-bg: #f5f7f9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  block-size: 100vh;
+  inline-size: 100vw;
+  font-family: var(--ff-body);
+  background-color: var(--clr-white);
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+.wrapper {
+  background-color: var(--clr-bg);
+  inline-size: 70%;
+  block-size: 100%;
+  max-inline-size: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.card {
+  inline-size: 50%;
+  max-inline-size: 450px;
+  background-color: var(--clr-white);
+  padding: 4em;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 8px black;
+}
+
+.card-title {
+  color: var(--clr-dark-blue);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.account_details {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.account_details img {
+  border-radius: 50%;
+}
+
+.account_details > div {
+  font-size: 0.85rem;
+  color: var(--clr-dark-blue);
+}
+
+form {
+  inline-size: 95%;
+}
+
+.password_input {
+  position: relative;
+}
+
+.password_input > label {
+  color: var(--clr-dark-blue);
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  padding-block-end: 0.5em;
+}
+
+.password_input > i {
+  position: absolute;
+}
+
+.password_input .fa-lock {
+  top: 50%;
+  left: 0.75em;
+}
+
+.password {
+  inline-size: 100%;
+  padding: 0.75em;
+  padding-inline-start: 2.75em;
+  border-style: solid;
+  border-color: var(--clr-dark-blue);
+  border-width: 0.1em 0.1em 0.2em 0.2em;
+  border-radius: 0.5em;
+}
+
+.password_input .fa-eye,
+.password_input .fa-eye-slash {
+  cursor: pointer;
+  top: 50%;
+  right: -1.5em;
+  color: var(--clr-gray);
+}
+
+.password_input .fa-eye {
+  color: var(--clr-dark-blue);
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+
+.toggle > input {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.toggle > .fill {
+  --width: 2.5em;
+
+  cursor: pointer;
+  background-color: transparent;
+  inline-size: var(--width);
+  block-size: calc(var(--width) / 2);
+  border: 0.15em solid var(--clr-dark-blue);
+  border-radius: 10rem;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#stay_signed-in:checked + .fill {
+  background-color: var(--clr-dark-blue);
+}
+
+.toggle > .fill::before {
+  content: "";
+  background-color: var(--clr-dark-blue);
+  inline-size: calc(calc(var(--width) / 2) - 0.45em);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(15%, -50%);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#stay_signed-in:checked + .fill::before {
+  transform: translate(165%, -50%);
+  background-color: var(--clr-white);
+}
+
+.toggle > span {
+  font-size: 0.85rem;
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-bold);
+  margin-inline-start: 0.5em;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.75em 1.5em;
+  transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover,
+.submit:focus-visible {
+  transform: scale(1.02);
+}
+
+.reset {
+  font-size: 0.85rem;
+  color: var(--clr-dark-blue);
+  font-weight: var(--fw-semi-bold);
+}
