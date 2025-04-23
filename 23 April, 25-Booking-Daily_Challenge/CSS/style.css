@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --ff-body: "Manrope", "Arial";
+
+  --clr-purple: #2b2544;
+  --clr-purple-50: #332c5a;
+  --clr-gray: #f0f0f7;
+  --clr-white: #ffffff;
+  --clr-pink: #e4266c;
+  --clr-shadow: #c81f5d;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-body);
+  block-size: 100vh;
+  background-color: var(--clr-gray);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  inline-size: 100%;
+  padding: 2em;
+}
+
+.card {
+  border-radius: 1.25em;
+  overflow: hidden;
+}
+
+.card_top {
+  background-color: var(--clr-purple);
+  color: var(--clr-white);
+  padding: 2.25em;
+  position: relative;
+}
+
+.card_top-contents {
+  inline-size: 70%;
+}
+
+.card_top-title {
+  font-weight: 500;
+  padding-block-end: 1.5em;
+}
+
+.card_top-option_section {
+  display: flex;
+  gap: 3em;
+}
+
+.card_top-option_section > label {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5em;
+}
+
+.card_top-option_section input {
+  appearance: none;
+  -webkit-appearance: none;
+  inline-size: 1.5em;
+  aspect-ratio: 1 / 1;
+  border: 0.15em solid var(--clr-white);
+  border-radius: 50%;
+  position: relative;
+  background-color: transparent;
+}
+
+.card_top-option_section input:checked::before {
+  content: "";
+  inline-size: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--clr-white);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_top-close {
+  cursor: pointer;
+  height: 3em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--clr-purple-50);
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  border: none;
+}
+
+.card_top-close > i {
+  color: var(--clr-gray);
+  font-size: 1.5em;
+  opacity: 0.4;
+}
+
+.card_bottom {
+  background-color: var(--clr-white);
+  padding: 2.25em;
+}
+
+.card_bottom-title {
+  font-weight: 700;
+  color: var(--clr-purple);
+}
+
+.card_bottom-party_size {
+  inline-size: 100%;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  margin-block-start: 1em;
+}
+
+.card_bottom-party_size > div {
+  flex: 1;
+  padding-block: 1.5em;
+}
+
+.card_bottom-party_size label {
+  cursor: pointer;
+  background-color: var(--clr-white);
+  color: var(--clr-purple);
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0.15em solid var(--clr-gray);
+  border-radius: 0.5em;
+  display: flex;
+  block-size: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1em;
+  padding: 1.25em 1em;
+  transition: all 0.5s ease;
+}
+
+.card_bottom-party_size .icons {
+  display: grid;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+#size_four + label .icons,
+#size_two + label .icons {
+  grid-template-columns: repeat(2, auto);
+}
+
+#size_six + label .icons {
+  grid-template-columns: repeat(3, auto);
+}
+
+.icons i {
+  color: var(--clr-purple);
+}
+
+.card_bottom-party_size .icons i {
+  font-size: 1.25rem;
+}
+
+#size_two + label .icons i {
+  font-size: 2rem;
+}
+#size_four + label .icons i,
+#size_six + label .icons i {
+  font-size: 1rem;
+}
+
+#size_two:checked + label,
+#size_four:checked + label,
+#size_six:checked + label {
+    background-color: var(--clr-purple);
+    color: var(--clr-white);
+    border: transparent;
+}
+
+#size_two:checked + label i,
+#size_four:checked + label i,
+#size_six:checked + label i {
+    color: var(--clr-white);
+}
+
+.card_bottom-btn {
+    cursor: pointer;
+    background-color: var(--clr-pink);
+    color: var(--clr-white);
+    inline-size: 100%;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 0px 5px 15px var(--clr-shadow);
+    margin-block: 2em;
+    padding: 1.25em;
+    transition: transform 0.25s ease;
+}
+.card_bottom-btn:hover {
+    transform: scale(1.05);
+}
+
+.card_bottom-btn > a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--clr-white);
+    margin-inline: 0.5em;
+}
+
+.card_bottom-btn > i {
+    font-size: 1rem;
+}

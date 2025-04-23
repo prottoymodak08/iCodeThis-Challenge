@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24th April, 2025 | iCodeThis</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="card_top">
+          <div class="card_top-contents">
+            <h2 class="card_top-title">Where are do you want to play?</h2>
+            <div class="card_top-option_section">
+              <label><input type="radio" checked name="city" />Bergen</label>
+              <label><input type="radio" name="city" />Oslo</label>
+            </div>
+          </div>
+          <button class="card_top-close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="card_bottom">
+          <h2 class="card_bottom-title">Choose the party size</h2>
+          <div class="card_bottom-party_size">
+            <div>
+              <input type="radio" name="party_size" id="size_two" hidden />
+              <label for="size_two">
+                <div class="icons">
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <p>2 people</p>
+              </label>
+            </div>
+            <div>
+              <input type="radio" name="party_size" id="size_four" hidden />
+              <label for="size_four">
+                <div class="icons">
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <p>4 people</p>
+              </label>
+            </div>
+            <div>
+              <input type="radio" name="party_size" id="size_six" hidden />
+              <label for="size_six">
+                <div class="icons">
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <p>6 people</p>
+              </label>
+            </div>
+          </div>
+          <button class="card_bottom-btn">
+            <a href="#">Continue</a>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
