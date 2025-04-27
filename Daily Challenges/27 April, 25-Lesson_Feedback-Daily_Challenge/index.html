@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson Feedback | iCodeThis Daily</title>
+
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <h2 class="title">Was this lesson useful?</h2>
+        <div class="card_review_section flex">
+          <button class="review_btn" id="great-btn">
+            <i class="fa-regular fa-face-laugh-beam"></i>
+            <span>Yes, it was great!</span>
+          </button>
+          <button class="review_btn" id="normal-btn">
+            <i class="fa-regular fa-face-grin-beam-sweat"></i>
+            <span>Sort of, thanks!</span>
+          </button>
+          <button class="review_btn" id="bad-btn">
+            <i class="fa-regular fa-face-meh-blank"></i>
+            <span>Not Really</span>
+          </button>
+        </div>
+        <div id="confetti"></div>
+        <p class="suggestion">Got a suggestion? <a href="#">Let us know</a></p>
+        <div class="feedback_card flex">
+          <div class="nested_card">
+            <h3>
+              Need more <br />
+              help?
+            </h3>
+            <a href="#">
+              <span>Contact Support</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
+          <div class="nested_card">
+            <h3>
+              Want to give feedback <br />
+              on a feature?
+            </h3>
+            <a href="#">
+              <span>Submit your feedback</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="app.js"></script>
+</html>

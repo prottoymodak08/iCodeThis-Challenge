@@ -95,6 +95,7 @@ body {
   min-block-size: 100vh;
   display: grid;
   place-content: center;
+  background: linear-gradient(to right, rgb(254, 240, 138), rgb(251, 207, 232), rgb(244, 114, 182))
 }
 
 main {
@@ -278,3 +279,4 @@ main {
   color: var(--clr-700);
   border-color: var(--clr-700);
 }
+
