@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --clr-yellow: #f6e298;
+  --clr-yellow-shadow: hsla(47, 84%, 78%, 0.3);
+  --clr-purple: #9d09e2;
+  --clr-purple-shadow: hsla(281, 92%, 46%, 0.3);
+  --clr-blue: #03acfa;
+  --clr-blue-shadow: hsla(199, 98%, 50%, 0.3);
+
+  --clr-bg: #f1f0f7;
+  --clr-card-bg: #f4f6fa;
+  --clr-price-table-bg: #ffffff;
+
+  --clr-heading: #191637;
+  --clr-btn: #f4f6fa;
+
+  --ff-heading: "Roboto Condensed", sans-serif;
+  --ff-body: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-block-size: 100vh;
+  background-color: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-inline-size: 3em;
+}
+
+.ice {
+  max-inline-size: 1.75em;
+}
+
+.card {
+  inline-size: 90%;
+  max-inline-size: 62.5em;
+  background-color: var(--clr-card-bg);
+  border-radius: 1.5em;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.329);
+  padding: 4em;
+  text-align: center;
+}
+
+.card h2 {
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--clr-heading);
+}
+
+.card p {
+  font-family: var(--ff-body);
+  font-size: 1rem;
+  inline-size: 90%;
+  margin-inline: auto;
+  padding-block: 2em;
+}
+
+.price_table_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.price-table {
+  inline-size: 30%;
+  background-color: var(--clr-price-table-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  text-align: start;
+  border-radius: 0.75em;
+  margin-block: 1em;
+  padding: 2em;
+}
+
+.price-table img {
+  margin-block: 0.75em;
+}
+
+.price-table strong {
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  color: var(--clr-heading);
+}
+
+.price-table small {
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.price-table h3 {
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-block: 0.75em;
+}
+
+.price-table h3 > span {
+  font-family: var(--ff-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-heading);
+}
+
+.price-table button {
+  cursor: pointer;
+  font-family: var(--ff-body);
+  font-size: clamp(1rem, 5vw, 0.85rem);
+  font-weight: 600;
+  background-color: var(--clr-btn);
+  border: none;
+  border-radius: 2em;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.267);
+  margin-block: 1em;
+  padding: 1em;
+  transition: all 250ms ease-in-out;
+}
+
+.price-table button:hover,
+.price-table button:focus-visible {
+  transform: scale(1.02);
+}
+
+.price_one {
+  box-shadow: -15px -15px 0px var(--clr-yellow-shadow);
+}
+.price_one button:hover {
+  background-color: var(--clr-yellow);
+}
+
+.price_two {
+  box-shadow: -15px -15px 0px var(--clr-purple-shadow);
+}
+.price_two button:hover {
+  color: white;
+  background-color: var(--clr-purple);
+}
+
+.price_three {
+  box-shadow: -15px -15px 0px var(--clr-blue-shadow);
+}
+.price_three button:hover {
+  color: white;
+  background-color: var(--clr-blue);
+}
+
+.see_all_plan {
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--clr-bg);
+  background-color: var(--clr-heading);
+  border-style: none;
+  border-radius: 2em;
+  margin-block-start: 2em;
+  padding: 1em;
+  transition: transform 250ms ease-in;
+}
+
+.see_all_plan:hover {
+  transform: scale(1.02);
+}
